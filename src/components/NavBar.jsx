@@ -33,15 +33,15 @@ const NavBar = () => {
   return (
     <header className={` bg-white sticky-top ${scroll ? "sticky" : ""}`}>
       <div className="container-xl top-bar  d-lg-block">
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="d-flex justify-content-center justify-content-md-between align-items-center">
           <div className="top-link pe-2 d-flex align-items-center gap-2">
             <p>تسجيل دخول</p>
             <button onClick={toggleMenu} className="border-0 bg-transparent">
               <FaBars className="bar-icon d-none" />
             </button>
           </div>
-          <div className="top-info ps-2 d-flex gap-3">
-            <div className="top-nav-icon">
+          <div className="top-info ps-2  gap-3 d-none d-md-flex">
+            <div className="top-nav-icon d-none d-md-block">
               <FaFacebookF className="text-white mx-1" />
               <FaInstagram className="text-white mx-1" />
               <FaWhatsapp className="text-white mx-1" />
@@ -57,7 +57,7 @@ const NavBar = () => {
       {/* Menu */}
       <div className="container-xl p-0">
         <nav className="navbar">
-          <div className="logo">
+          <div className="logo mx-auto">
             <h1>منتجات طبيعية</h1>
           </div>
           <div
@@ -98,7 +98,7 @@ const NavBar = () => {
             <span className="nav-item nav-link">تواصل معنا</span>
           </div>
           {/* search */}
-          <div className="d-flex m-3 me-0">
+          <div className="d-flex ju mx-auto ">
             <input type="text" placeholder="بحث" />
             <a href="#" className="position-relative me-4 my-auto">
               <FaShoppingBag />

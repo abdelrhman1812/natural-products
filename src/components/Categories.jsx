@@ -19,9 +19,8 @@ const Categories = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
-          centerPadding: "10px",
         },
       },
       {
@@ -29,7 +28,6 @@ const Categories = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          centerPadding: "20px",
         },
       },
     ],
