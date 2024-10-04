@@ -530,7 +530,11 @@ nav input {
 
 @media (max-width: 768px) {
   .section-title h2 {
-    font-size: 20px;
+    font-size: 17px;
+  }
+  .section-title a {
+    padding: 4px 6px !important;
+    max-width: 120px;
   }
 }
 

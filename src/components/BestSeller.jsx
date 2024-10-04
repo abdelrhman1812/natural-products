@@ -7,7 +7,6 @@ const BestSeller = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    centerPadding: "50px",
     arrows: true,
     responsive: [
       {
