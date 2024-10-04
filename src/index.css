@@ -368,8 +368,7 @@ nav input {
 }
 
 .new-added .item:hover,
-.trend .item:hover,
-r {
+.trend .item:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   border-color: var(--primary-color);
   transition: all 0.5s ease-in-out;
@@ -441,11 +440,15 @@ r {
   font-size: 14px;
   line-height: 0;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin: auto;
 }
 
 .new-added button.add-to-cart svg,
 .trend button.add-to-cart svg {
-  margin: 0 10px;
   font-size: 16px;
 }
 
@@ -453,6 +456,33 @@ r {
 .trend button.add-to-cart:hover {
   background-color: var(--secondary-color);
 }
+
+@media (max-width: 768px) {
+  .new-added .item,
+  .trend .item {
+  }
+  .new-added .item img,
+  .trend .item img {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+  .new-added button.add-to-cart,
+  .trend button.add-to-cart {
+    font-size: 12px;
+    padding: 7px 15px;
+    display: none;
+  }
+
+  .new-added .item h3,
+  .trend .item h3 {
+    font-size: 16px;
+  }
+  .new-added .item p,
+  .trend .item p {
+    font-size: 16px;
+  }
+}
+
 /* Section title */
 
 .section-title {
@@ -492,6 +522,12 @@ r {
   margin-top: -1px;
   z-index: 1;
   background-color: #f7f8f7;
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 20px;
+  }
 }
 
 /* Review */

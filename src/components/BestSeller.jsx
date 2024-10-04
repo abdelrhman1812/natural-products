@@ -1,5 +1,3 @@
-import Aos from "aos";
-import { useEffect } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import Slider from "react-slick/lib/slider";
 import { bestSellers } from "../assets/data/products";
@@ -15,7 +13,7 @@ const BestSeller = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -29,18 +27,18 @@ const BestSeller = () => {
     ],
   };
 
-  useEffect(() => {
-    Aos.init({});
-  }, []);
+  //   useEffect(() => {
+  //     Aos.init({});
+  //   }, []);
 
   return (
     <section className="new-added overflow-hidden">
-      <div className="container-xl">
+      <div className="container-xl p-0">
         <SectionTitle title="الاكثر مبيعا" />
         <div className="row">
           <Slider {...settings}>
             {bestSellers.map((item, index) => (
-              <div key={index} className="col-md-6 p-2">
+              <div key={index} className="col-md-6 p-2 ">
                 <div className="item" data-aos="fade-up">
                   <figure className="overflow-hidden">
                     <img src={item.img} alt="" className="w-100" />
@@ -49,8 +47,8 @@ const BestSeller = () => {
                   <p>ريال {item.price}</p>
                   <button className="add-to-cart">
                     <FaCartArrowDown />
-                    اضف الي السلة
-                  </button>{" "}
+                    <span className="d-none d-md-block">اضف الى السلة</span>
+                  </button>
                 </div>
               </div>
             ))}

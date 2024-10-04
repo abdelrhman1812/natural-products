@@ -1,5 +1,3 @@
-import Aos from "aos";
-import { useEffect } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import Slider from "react-slick/lib/slider";
 import { skin_care } from "../assets/data/products";
@@ -16,7 +14,7 @@ const NewAdded = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -30,15 +28,15 @@ const NewAdded = () => {
     ],
   };
 
-  useEffect(() => {
-    Aos.init({});
-  }, []);
+  //   useEffect(() => {
+  //     Aos.init({});
+  //   }, []);
 
   return (
     <section className="new-added overflow-hidden">
-      <div className="container-xl">
+      <div className="container-xl p-0">
         <SectionTitle title="المنتجات الجديدة" />
-        <div className="row">
+        <div className="row ">
           <Slider {...settings}>
             {skin_care.map((item, index) => (
               <div key={index} className="col-md-6 p-2">
@@ -50,7 +48,7 @@ const NewAdded = () => {
                   <p>ريال {item.price}</p>
                   <button className="add-to-cart">
                     <FaCartArrowDown />
-                    اضف الي السلة
+                    <span className="d-none d-md-block">اضف الى السلة</span>
                   </button>
                 </div>
               </div>
