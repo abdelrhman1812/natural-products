@@ -40,7 +40,7 @@ const NewAdded = () => {
           <Slider {...settings}>
             {skin_care.map((item, index) => (
               <div key={index} className="col-md-6 p-2">
-                <div className="item" data-aos="fade-up">
+                <div className="item">
                   <figure className="overflow-hidden">
                     <img src={item.img} alt="" className="w-100" />
                   </figure>

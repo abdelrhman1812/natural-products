@@ -32,15 +32,14 @@ const TrendToday = () => {
   //   Aos.init({});
   // }, []);
   return (
-    <section className="trend overflow-hidden py-5">
+    <section className="trend overflow-hidden ">
       <div className="container-xl p-0">
-        <SectionTitle title="الأكثر تداولا اليوم" />
-        <h2></h2>
-        <div className="row">
+        <div className="row m-0">
+          <SectionTitle title="الأكثر تداولا اليوم" />
           <Slider {...settings}>
             {oils.map((oil, index) => (
               <div key={index} className="col-md-6 p-2 ">
-                <div className="item" data-aos="fade-up">
+                <div className="item">
                   <figure className="overflow-hidden">
                     <img src={oil.img} alt="" className="w-100" />
                   </figure>
