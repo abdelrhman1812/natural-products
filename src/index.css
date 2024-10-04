@@ -475,6 +475,10 @@ nav input {
 
   .new-added .item h3,
   .trend .item h3 {
+    direction: rtl;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 16px;
   }
   .new-added .item p,
