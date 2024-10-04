@@ -1,7 +1,10 @@
+import { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import SectionTitle from "./SectionTitle";
+
+import Aos from "aos";
 
 const Reviews = () => {
   const settings = {
@@ -27,6 +30,10 @@ const Reviews = () => {
       },
     ],
   };
+
+  useEffect(() => {
+    Aos.init({});
+  }, []);
 
   const products = [
     {
@@ -69,7 +76,7 @@ const Reviews = () => {
           <Slider {...settings}>
             {products.map((product, index) => (
               <div className="col-md-6 p-2" key={index}>
-                <div className="review-item active">
+                <div className="review-item active" data-aos="fade-up">
                   <img
                     src={product.img}
                     className="mr-3 w-25 h-25 rounded-circle"

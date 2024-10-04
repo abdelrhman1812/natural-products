@@ -1,3 +1,5 @@
+import Aos from "aos";
+import { useEffect } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
@@ -28,6 +30,10 @@ const TrendToday = () => {
       },
     ],
   };
+
+  useEffect(() => {
+    Aos.init({});
+  }, []);
   return (
     <section className="trend overflow-hidden py-5">
       <div className="container-xl">
@@ -37,7 +43,7 @@ const TrendToday = () => {
           <Slider {...settings}>
             {oils.map((oil, index) => (
               <div key={index} className="col-md-6 p-2">
-                <div className="item">
+                <div className="item" data-aos="fade-up">
                   <figure className="overflow-hidden">
                     <img src={oil.img} alt="" className="w-100" />
                   </figure>

@@ -1,8 +1,9 @@
+import Aos from "aos";
+import { useEffect } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import Slider from "react-slick/lib/slider";
 import { bestSellers } from "../assets/data/products";
 import SectionTitle from "./SectionTitle";
-
 const BestSeller = () => {
   const settings = {
     speed: 500,
@@ -28,6 +29,10 @@ const BestSeller = () => {
     ],
   };
 
+  useEffect(() => {
+    Aos.init({});
+  }, []);
+
   return (
     <section className="new-added overflow-hidden">
       <div className="container-xl">
@@ -36,7 +41,7 @@ const BestSeller = () => {
           <Slider {...settings}>
             {bestSellers.map((item, index) => (
               <div key={index} className="col-md-6 p-2">
-                <div className="item">
+                <div className="item" data-aos="fade-up">
                   <figure className="overflow-hidden">
                     <img src={item.img} alt="" className="w-100" />
                   </figure>

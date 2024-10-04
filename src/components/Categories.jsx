@@ -1,3 +1,5 @@
+import Aos from "aos";
+import { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -6,6 +8,7 @@ import body from "../assets/body.jpg";
 import hair from "../assets/hair.jpg";
 import oil from "../assets/oil.jpg";
 import SectionTitle from "./SectionTitle";
+
 const Categories = () => {
   const settings = {
     speed: 500,
@@ -33,6 +36,9 @@ const Categories = () => {
     ],
   };
 
+  useEffect(() => {
+    Aos.init({});
+  }, []);
   return (
     <section className="categories overflow-hidden py-5">
       <div className="container-xl">
@@ -40,7 +46,7 @@ const Categories = () => {
         <div className="row">
           <Slider {...settings}>
             <div className="col-md-6 p-2">
-              <div className="item">
+              <div className="item" data-aos="zoom-out">
                 <figure>
                   <img src={oil} alt="" className="w-100" />
                 </figure>
@@ -51,7 +57,7 @@ const Categories = () => {
               </div>
             </div>
             <div className="col-md-6 p-2">
-              <div className="item">
+              <div className="item" data-aos="zoom-out">
                 <figure>
                   <img src={hair} alt="" className="w-100" />
                 </figure>
@@ -62,7 +68,7 @@ const Categories = () => {
               </div>
             </div>
             <div className="col-md-6 p-2">
-              <div className="item">
+              <div className="item " data-aos="zoom-out">
                 <figure>
                   <img src={body} alt="" className="w-100" />
                 </figure>
@@ -73,7 +79,7 @@ const Categories = () => {
               </div>
             </div>
             <div className="col-md-6 p-2">
-              <div className="item">
+              <div className="item " data-aos="zoom-out">
                 <figure>
                   <img src={bashra} alt="" className="w-100" />
                 </figure>
